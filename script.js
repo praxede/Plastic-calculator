@@ -8,21 +8,28 @@ let totalSemana = Number(garrafas) + Number(sacolas) + Number(embalagens);
 let totalMes = totalSemana * 4;
 let totalAno = totalSemana * 52;
 
-// estimativa média de peso por item plástico
 let pesoMedio = 0.02; // 20g por item
-
 let pesoAno = totalAno * pesoMedio;
+
+// simulação de redução
+let reducaoSemana = 2;
+let economiaAno = reducaoSemana * 52;
+let economiaPeso = economiaAno * pesoMedio;
 
 document.getElementById("resultado").innerHTML =
 `
 Consumo semanal: ${totalSemana} itens de plástico<br><br>
+
 Consumo mensal: ${totalMes} itens<br><br>
+
 Consumo anual: <b>${totalAno} itens</b><br><br>
 
-Isso pode representar aproximadamente <b>${pesoAno.toFixed(2)} kg de plástico por ano</b>.
+Isso pode representar aproximadamente <b>${pesoAno.toFixed(2)} kg de plástico por ano</b>.<br><br>
 
-<br><br>
-Pequenas mudanças no consumo podem reduzir significativamente esse impacto ambiental.
+<hr><br>
+
+<b>Simulação de redução:</b><br><br>
+
+Se você reduzir apenas <b>2 itens de plástico por semana</b>, poderá evitar aproximadamente <b>${economiaAno} itens por ano</b>, o que representa cerca de <b>${economiaPeso.toFixed(2)} kg de plástico a menos no ambiente</b>.
 `;
-
 }
