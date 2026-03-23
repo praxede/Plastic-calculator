@@ -93,3 +93,18 @@ text: 'Consumo estimado de plástico'
 });
 
 }
+
+
+function limpar(){
+
+document.getElementById("garrafas").value = "";
+document.getElementById("sacolas").value = "";
+document.getElementById("embalagens").value = "";
+
+document.getElementById("resultado").innerHTML = "";
+
+if(grafico){
+grafico.destroy();
+}
+
+}
