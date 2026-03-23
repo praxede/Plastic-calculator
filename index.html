@@ -2,18 +2,33 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
 <title>Calculadora de Consumo de Plástico</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Calculadora de Consumo de Plástico</h1>
-<p>Uma ferramenta para conscientização ambiental</p>
+<p>Ferramenta de conscientização ambiental</p>
+
 </header>
 
 <div class="container">
+
+<h2>Sobre a ferramenta</h2>
+
+<p>
+Esta calculadora estima a quantidade de plástico descartável utilizada no dia a dia.
+A partir de alguns itens comuns do cotidiano, é possível visualizar o impacto anual
+desse consumo e refletir sobre formas de reduzi-lo.
+</p>
 
 <h2>Informe seu consumo semanal</h2>
 
@@ -21,13 +36,13 @@
 
 <input type="number" id="sacolas" placeholder="Sacolas plásticas por semana"><br>
 
-<input type="number" id="embalagens" placeholder="Embalagens descartáveis"><br><br>
+<input type="number" id="embalagens" placeholder="Embalagens descartáveis por semana"><br>
 
 <button onclick="calcular()">Calcular impacto</button>
 
 <div id="resultado"></div>
 
-</div>
+<canvas id="graficoPlastico"></canvas>
 
 <h2>Impacto do plástico no meio ambiente</h2>
 
@@ -35,8 +50,8 @@
 O plástico pode levar centenas de anos para se decompor na natureza.
 Grande parte dos resíduos plásticos acaba em rios e oceanos,
 causando danos à vida marinha e ao meio ambiente.
-Reduzir o consumo de plástico descartável é uma das formas
-mais simples de contribuir para a preservação ambiental.
+Reduzir o consumo de plástico descartável é uma das formas mais
+simples de contribuir para a preservação ambiental.
 </p>
 
 <h2>Como reduzir o consumo de plástico</h2>
@@ -46,11 +61,14 @@ Utilize garrafas reutilizáveis, evite sacolas plásticas descartáveis,
 prefira produtos com menos embalagens e faça o descarte correto
 dos resíduos para reciclagem.
 </p>
-  
+
+</div>
+
 <footer>
 
 Projeto de Extensão Universitária<br>
-Conscientização sobre o consumo de plástico
+Conscientização sobre consumo de plástico<br>
+Autor: Wanderson Praxede
 
 </footer>
 
