@@ -2,7 +2,9 @@
 <html>
 
 <head>
+
 <meta charset="UTF-8">
+
 <title>Calculadora de Consumo de Plástico</title>
 
 <link rel="stylesheet" href="style.css">
@@ -15,8 +17,12 @@
 
 <header>
 
-<h1>Calculadora de Consumo de Plástico</h1>
-<p>Ferramenta de conscientização ambiental</p>
+<h1>🌍 Quanto plástico você descarta por ano?</h1>
+
+<p>
+Descubra em menos de 10 segundos utilizando esta calculadora de consumo de plástico.
+Pequenas mudanças no dia a dia podem reduzir significativamente o impacto ambiental.
+</p>
 
 </header>
 
@@ -32,15 +38,19 @@ desse consumo e refletir sobre formas de reduzi-lo.
 
 <h2>Informe seu consumo semanal</h2>
 
-<input type="number" id="garrafas" placeholder="Garrafas plásticas por semana"><br>
+<label>🥤 Garrafas plásticas por semana</label><br>
+<input type="number" id="garrafas"><br>
 
-<input type="number" id="sacolas" placeholder="Sacolas plásticas por semana"><br>
+<label>🛍 Sacolas plásticas por semana</label><br>
+<input type="number" id="sacolas"><br>
 
-<input type="number" id="embalagens" placeholder="Embalagens descartáveis por semana"><br>
+<label>📦 Embalagens descartáveis por semana</label><br>
+<input type="number" id="embalagens"><br>
 
 <button onclick="calcular()">Calcular impacto</button>
+
 <button onclick="limpar()">Limpar</button>
-  
+
 <div id="resultado"></div>
 
 <canvas id="graficoPlastico"></canvas>
