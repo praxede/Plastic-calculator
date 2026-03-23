@@ -10,7 +10,7 @@ let totalSemana = Number(garrafas) + Number(sacolas) + Number(embalagens);
 let totalMes = totalSemana * 4;
 let totalAno = totalSemana * 52;
 
-let pesoMedio = 0.02; // 20g por item
+let pesoMedio = 0.02;
 let pesoAno = totalAno * pesoMedio;
 
 let garrafasEquivalentes = pesoAno / 0.02;
@@ -24,11 +24,12 @@ let impactoColetivo = economiaAno * 100;
 document.getElementById("resultado").innerHTML =
 
 `
-Consumo semanal: ${totalSemana} itens de plástico<br><br>
+<h3>Consumo anual estimado</h3>
 
+<h1>${totalAno} itens de plástico</h1>
+
+Consumo semanal: ${totalSemana} itens<br>
 Consumo mensal: ${totalMes} itens<br><br>
-
-Consumo anual: <b>${totalAno} itens</b><br><br>
 
 Isso pode representar aproximadamente <b>${pesoAno.toFixed(2)} kg de plástico por ano</b>.<br><br>
 
@@ -60,32 +61,27 @@ type: 'bar',
 
 data: {
 
-labels: ['Semanal', 'Mensal', 'Anual'],
+labels: ['Semanal','Mensal','Anual'],
 
 datasets: [{
 
-label: 'Consumo estimado de plástico',
+label:'Consumo estimado de plástico',
 
-data: [totalSemana, totalMes, totalAno]
+data:[totalSemana,totalMes,totalAno]
 
 }]
 
 },
 
-options: {
+options:{
 
-responsive: true,
+responsive:true,
 
-plugins: {
-
-title: {
-
-display: true,
-
-text: 'Consumo estimado de plástico'
-
+plugins:{
+title:{
+display:true,
+text:'Consumo estimado de plástico'
 }
-
 }
 
 }
@@ -94,14 +90,13 @@ text: 'Consumo estimado de plástico'
 
 }
 
-
 function limpar(){
 
-document.getElementById("garrafas").value = "";
-document.getElementById("sacolas").value = "";
-document.getElementById("embalagens").value = "";
+document.getElementById("garrafas").value="";
+document.getElementById("sacolas").value="";
+document.getElementById("embalagens").value="";
 
-document.getElementById("resultado").innerHTML = "";
+document.getElementById("resultado").innerHTML="";
 
 if(grafico){
 grafico.destroy();
