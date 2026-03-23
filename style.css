@@ -73,3 +73,19 @@ color:white;
 padding:15px;
 font-size:14px;
 }
+
+@media (max-width:600px){
+
+.container{
+padding:15px;
+}
+
+input{
+width:90%;
+}
+
+canvas{
+width:100%;
+}
+
+}
